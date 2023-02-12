@@ -1,10 +1,13 @@
 import React from "react"
 
-const Button = ({ type, text }) => {
+const Button = ({ type, text, clickHandler }) => {
+  const handleOnClick = () => {
+    console.log("onClick en el Button")
+    clickHandler(text)
+  }
+  
   return (
-    <button className={type} onClick={() => {
-      console.log("onClick en el Button")
-    }}>
+    <button className={type} onClick={handleOnClick}>
       <span>{text}</span>
     </button>
   )
