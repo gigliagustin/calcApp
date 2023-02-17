@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Button from "./components/Button/Button";
+import MathOperations from "./components/MathOperations/MathOperations";
 import Result from "./components/Result/Result";
 
 
@@ -10,7 +11,6 @@ const App = () => {
     console.log('Button.clickHandler: ',text)
   }
   
-  console.log("Renderización de la App")
   return (
     <main className="react-calculator">
       <Result value={"0"} />
@@ -30,13 +30,7 @@ const App = () => {
         <button>Clear</button>
         <button>r</button>
       </div>
-      <div className="math-operations">
-            <button>+</button>
-            <button>-</button>
-            <button>*</button>
-            <button>/</button>
-            <button>=</button>
-        </div>
+      <MathOperations />
     </main>
   );
 };
